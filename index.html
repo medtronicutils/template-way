@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+        <script type="text/javascript" src="./index.js"></script>
+    </head>
+    <body>
+    Choose transport type:<br>
+    <select id="transport_type">
+        <option selected disabled>Choose transport type:</option>
+        <option value="Flights:">Airplane</option>
+        <option value="Trains:">Train</option>
+    </select>
+
+    <br><br>Choose way type:<br>
+    <select id="way_type">
+        <option selected disabled>Choose way type:</option>
+        <option value="Outbound:">Go</option>
+        <option value="Inbound:">Back</option>
+        <option value="<!-- -->">Change</option>
+    </select>
+
+    <br><br>Trip date: <br>
+    <input id="trip_date" type="date">
+
+    <br><br><br><br><br><br>Flight/Train №: <br>
+    <input id="transport_number" type="text">
+
+    <div style="display: flex;">
+        <div>
+            <br><br>Airport or train station departure : <br>
+            <input id="place_departure" type="text">
+
+            <br><br>Time departure: <br>
+            <input id="time_departure" type="time" min="00:00" max="23:59">
+        </div>
+        <div style="margin-left: 50px">
+            <br><br>Airport or train station arrival : <br>
+            <input id="place_arrival" type="text">
+
+            <br><br>Time arrival: <br>
+            <input id="time_arrival" type="time" min="00:00" max="23:59">
+        </div>
+    </div>
+
+    <br><br>
+    <div>
+        <button onclick="add_rule()" style="margin-right: 20px">Add</button>
+        <button onclick="clear_rules()" style="margin-left: 20px">Clear</button>
+    </div>
+    <br><br><br>
+    <output id="output_result"></output>
+    </body>
+</html>
